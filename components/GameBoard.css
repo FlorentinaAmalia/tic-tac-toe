@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+
+.GameBoard {
+    font-family: "Merienda", sans-serif;
+    font-size: 3rem;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    height: 60vh;
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    gap: 15px;
+}
+
+.GameBoard div {
+    background-color: dimgray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

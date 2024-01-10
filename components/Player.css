@@ -1,0 +1,19 @@
+.Player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Player .name {
+    width: 70%;
+    text-align: center;
+}
+
+.Player #name-input {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /*background-color: transparent;*/
+    border: 0px;
+}

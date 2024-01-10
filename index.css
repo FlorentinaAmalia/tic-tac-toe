@@ -1,0 +1,18 @@
+body {
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 1.1rem;
+}
+
+body header {
+    margin-top: 30px;
+    font-size: 4rem;
+}
+
+#root {
+    width: 50%;
+    min-width: 300px;
+
+}
