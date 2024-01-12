@@ -7,22 +7,12 @@ const initialBoard = [
   [null, null, null],
 ];
 export default function GameBoard({ takenMoves = [], takeMove }) {
-  // const [board, setBoard] = useState(defaultBoard);
-
-  // it will change every time takenMoves is changing, that is managed by useState.
-  const gameBoard = initialBoard;
+  let gameBoard = initialBoard.map((el) => [...el]);
   for (let move of takenMoves) {
     gameBoard[move.row][move.col] = move.player;
   }
-
   const handleClick = (rowIdx, colIdx) => {
-    // setBoard((prevState) => {
-    //   const currentState = prevState.map((row) => [...row]);
-    //   currentState[rowIdx][colIdx] = activeSymbol;
-    //   return currentState;
-    // });
     takeMove(rowIdx, colIdx);
-    // changePlayer();
   };
 
   return (

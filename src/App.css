@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.container-GameBoard {
+  position: relative;
+}
+
 .game-container .players {
   display: flex;
   justify-content: space-between;
@@ -15,7 +19,7 @@
   width: 50%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .game-container .players {
     flex-direction: column;
   }

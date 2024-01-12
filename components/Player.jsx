@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Player.css";
-export default function Player({ defaultName, symbol, isActive }) {
-  const [name, setName] = useState(defaultName);
+export default function Player({
+  name,
+  symbol,
+  isActive,
+  gameOver,
+  onChangeName,
+}) {
+  // const [name, setName] = useState(defaultName);
   const [isEditing, setIsEditing] = useState(false);
 
   const handleOnCLick = () => {
@@ -9,13 +15,21 @@ export default function Player({ defaultName, symbol, isActive }) {
   };
 
   const handleOnChange = (event) => {
-    setName((prevName) => event.target.value);
+    // setName(event.target.value);
+    onChangeName(event.target.value);
   };
+
+  useEffect(() => {
+    onChangeName(name);
+  }, [name]);
 
   return (
     <div
       className={"Player"}
-      style={{ backgroundColor: isActive ? "gray" : "" }}
+      style={{
+        // backgroundColor: isActive ? "gray" : "",
+        border: isActive ? "2px solid #DE6321" : "",
+      }}
     >
       <span className={"name"}>
         {isEditing ? (
@@ -31,7 +45,9 @@ export default function Player({ defaultName, symbol, isActive }) {
         )}
       </span>
       <span className={"symbol"}>{symbol}</span>
-      <button onClick={handleOnCLick}>{isEditing ? "Save" : "Edit"}</button>
+      <button onClick={handleOnCLick} disabled={gameOver ? true : false}>
+        {isEditing ? "Save" : "Edit"}
+      </button>
     </div>
   );
 }

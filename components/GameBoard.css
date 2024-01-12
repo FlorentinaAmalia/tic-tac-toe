@@ -5,21 +5,26 @@
     font-family: "Merienda", sans-serif;
     font-size: 3rem;
     margin-top: 20px;
-    padding-bottom: 50px;
     height: 60vh;
     max-height: 600px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
-    gap: 15px;
+    gap: 10px;
 }
 
 .GameBoard div {
-    background-color: dimgray;
+    background-color: #4F4F4F;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+    .GameBoard div {
+        background-color: #F2F2F2;
+    }
 }

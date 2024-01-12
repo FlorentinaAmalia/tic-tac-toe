@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0 , 0.7);
 }
 
 .Player .name {
@@ -10,10 +12,18 @@
     text-align: center;
 }
 
+.Player .symbol {
+    margin: 0 10px;
+}
+
 .Player #name-input {
+    padding: 10px;
+    font-size: 1.1rem;
+    width: 80%;
+    outline: none;
     height: 100%;
-    width: 100%;
+    /*width: 100%;*/
     text-align: center;
-    /*background-color: transparent;*/
-    border: 0px;
+    background-color: transparent;
+    border: 0;
 }
